@@ -29,22 +29,12 @@ files generated in the [ebsynth_utility](https://github.com/s9roll7/ebsynth_util
 ## 🛠️ Installation
 
 First, you need to install [EbSynth](https://ebsynth.com/) on your Mac, and move the `EbSynth.app` to
-the `/Applications`
-folder
+the `/Applications` folder.
 
 Then, all you need is Python 3.6+ and pip, and just run the following commands in you Terminal:
 
 ```bash
-# Clone and cd
-git clone https://github.com/Littleor/ebsynth-auto-runer.git
-cd ebsynth-auto-runer
-
-# If you want to use venv
-python3 -m venv venv
-source venv/bin/activate
-
-# Install requirements
-pip install -r requirements.txt
+pip install ebsynth-auto-runer
 ```
 
 ## 🚀 Usage
@@ -60,7 +50,7 @@ command in your Terminal to start the automation:
 
 ```bash
 # You should replace the /path/to/your/project with your own path which is also the `ebsynth_utility` project path
-python main.py /path/to/your/project
+ebsynth-run /path/to/your/project
 ```
 
 > If you forget to give the permission to the `Terminal` app, the macOS will ask you to grant the `Screen Recording`
@@ -79,6 +69,30 @@ python main.py --help
 * You can freely to use your Mac while the `EbSynth` is running, but you should make the `EbSynth` window show at the
   top
   of the screen when the `EbSynth` ends the current `.ebs` file processing.
+
+## 📖 Manual Installation & Usage
+
+Clone the project and install the requirements:
+
+```bash
+# Clone and cd
+git clone https://github.com/Littleor/ebsynth-auto-runer.git
+cd ebsynth-auto-runer
+
+# If you want to use venv
+python3 -m venv venv
+source venv/bin/activate
+
+# Install requirements
+pip install -r requirements.txt
+```
+
+Run the following command to start the automation:
+
+```bash
+# You should replace the /path/to/your/project with your own path which is also the `ebsynth_utility` project path
+python main.py /path/to/your/project
+```
 
 ## 📝 TODO
 

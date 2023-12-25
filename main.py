@@ -1,10 +1,11 @@
 import logging
+import os
 import time
 
 from tqdm import tqdm
 
-from utils import get_scaling_factor, close_ebsynth, launch_ebsynth_with_file, find_and_click, find_all_location, \
-    logging_config
+from utils.auto_run import get_scaling_factor, launch_ebsynth_with_file, find_and_click, find_all_location
+from utils.common import logging_config, close_ebsynth
 
 
 class EbSynthAutoRuner:
@@ -12,9 +13,8 @@ class EbSynthAutoRuner:
     software_path = None
     synth_button_confidence_threshold = 0.98
     run_button_confidence_threshold = 0.99
-
-    run_button_reference_image_path = "images/reference/run_button.png"
-    synth_button_reference_image_path = "images/reference/synth_button.png"
+    run_button_reference_image_path = os.path.join(os.path.dirname(__file__), "data/run_button.png")
+    synth_button_reference_image_path = os.path.join(os.path.dirname(__file__), "data/synth_button.png")
 
     def __init__(self, synth_button_confidence_threshold: float = None,
                  run_button_confidence_threshold: float = None,
@@ -91,6 +91,7 @@ class EbSynthAutoRuner:
 def process_ebs_files(
     dir_path: str,
     ebsynth_auto_runer: EbSynthAutoRuner,
+    logger
 ):
     import os
     if not os.path.exists(dir_path):
@@ -145,7 +146,7 @@ def args_parser():
     return args
 
 
-if __name__ == '__main__':
+def main():
     args = args_parser()
 
     logging_config()
@@ -159,4 +160,9 @@ if __name__ == '__main__':
     process_ebs_files(
         dir_path=args.dir_path,
         ebsynth_auto_runer=ebsynth_auto_runer,
+        logger=logger
     )
+
+
+if __name__ == '__main__':
+    main()
