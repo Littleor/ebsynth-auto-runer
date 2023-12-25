@@ -26,7 +26,8 @@ files generated in the [ebsynth_utility](https://github.com/s9roll7/ebsynth_util
 
 ## 🛠️ Installation
 
-First, you need to install [EbSynth](https://ebsynth.com/) on your Mac, and move the `EbSynth` to the `/Applications`
+First, you need to install [EbSynth](https://ebsynth.com/) on your Mac, and move the `EbSynth.app` to
+the `/Applications`
 folder
 
 Then, all you need is Python 3.6+ and pip, and just run the following commands in you Terminal:
@@ -49,12 +50,6 @@ pip install -r requirements.txt
 With the `ebsynth_utility` extension, you can generate the keyframes and `.ebs` files, and then run the following
 command in your Terminal to start the automation:
 
-> Note:
->
-> You can freely to use your Mac while the `EbSynth` is running, but you
-> should make the `EbSynth` window show on the top of the screen when the `EbSynth` ends the current `ebs` file
-> processing.
-
 ```bash
 # You should replace the /path/to/your/project with your own path which is also the `ebsynth_utility` project path
 python main.py /path/to/your/project
@@ -65,6 +60,11 @@ If you want to know more about the arguments, just run the following command in 
 ```bash
 python main.py --help
 ```
+
+## ⚠️ NOTE
+
+You can freely to use your Mac while the `EbSynth` is running, but you should make the `EbSynth` window show at the top
+of the screen when the `EbSynth` ends the current `.ebs` file processing.
 
 ## 📝 TODO
 
