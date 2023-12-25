@@ -59,7 +59,7 @@ ebsynth-run /path/to/your/project
 If you want to know more about the arguments, just run the following command in your Terminal:
 
 ```bash
-python main.py --help
+ebsynth-run --help
 ```
 
 ## ⚠️ NOTE
