@@ -45,7 +45,7 @@ the `System Preferences` -> `Security & Privacy` -> `Privacy` -> `Screen Recordi
 
 Then, you should generate the keyframes and `.ebs` files with the `ebsynth_utility` extension.
 
-Finally, you should open the `Terminal` app, and `cd` to the `ebsynth-auto-runer` project folder, and run the following
+Finally, you should open the `Terminal` app, and run the following
 command in your Terminal to start the automation:
 
 ```bash
